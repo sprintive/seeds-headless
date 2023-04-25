@@ -1,0 +1,1 @@
+Seeds Headless Using NextJS
