@@ -1,0 +1,15 @@
+.responsive-image-style-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.responsive-image-style {
+    flex: 33%;
+
+}
+
+@media (max-width: 792px) {
+        .responsive-image-style {
+            flex: 100%;
+        }
+}

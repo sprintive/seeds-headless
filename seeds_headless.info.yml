@@ -1,0 +1,56 @@
+name: Seeds Headless Using NextJS
+type: profile
+description: "Kickoff distribution for SMEs using Next.Js, Curated by Sprintive."
+version: '1.0.x-dev'
+project: seeds_headless
+core_version_requirement: '^10'
+distribution:
+  name: Seeds Headless Using NextJS
+  install:
+    theme: root
+
+dependencies:
+  - drupal:node
+  - drupal:history
+  - drupal:block
+  - drupal:ckeditor
+  - drupal:config
+  - drupal:contextual
+  - drupal:menu_link_content
+  - drupal:datetime
+  - drupal:block_content
+  - drupal:editor
+  - drupal:image
+  - drupal:menu_ui
+  - drupal:options
+  - drupal:path
+  - drupal:page_cache
+  - drupal:dynamic_page_cache
+  - drupal:taxonomy
+  - drupal:shortcut
+  - drupal:toolbar
+  - drupal:field_ui
+  - drupal:file
+  - drupal:rdf
+  - drupal:views
+  - drupal:automated_cron
+  - drupal:help
+  - drupal:fast404
+  - views_bulk_operations:views_bulk_operations
+  - views_bulk_edit:views_bulk_edit
+  - admin_toolbar:admin_toolbar_links_access_filter
+  - admin_toolbar:admin_toolbar_tools
+  - diff:diff
+  - menu_admin_per_menu:menu_admin_per_menu
+  - taxonomy_access_fix:taxonomy_access_fix
+  - seeds_toolbar:seeds_toolbar
+  - masquerade:masquerade
+  - field_group:field_group
+
+
+  # Custom modules
+  - seeds_development:seeds_development
+
+themes:
+  - root
+  - olivero
