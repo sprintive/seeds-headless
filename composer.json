@@ -1,5 +1,5 @@
 {
-    "name": "drupal/seeds_headless",
+    "name": "sprintive/seeds_headless",
     "description": "Project template for Drupal projects with a relocated document root",
     "type": "drupal-profile",
     "license": "GPL-2.0-or-later",
@@ -56,7 +56,8 @@
         "drupal/remove_http_headers": "2.0.0"
     },
     "require-dev": {
-        "drush/drush": "*"
+        "drush/drush": "*",
+        "drupal/console": "*"
     },
     "conflict": {
         "drupal/drupal": "*"
