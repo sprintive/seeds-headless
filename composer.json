@@ -35,7 +35,7 @@
         "drupal/editor_advanced_link": "2.1.1",
         "drupal/ace_editor": "2.0.0-alpha1",
         "drupal/ckeditor_bidi": "4.0.0",
-        "drupal/fast_404": "dev-3287465-automated-drupal-10",
+        "drupal/fast_404": "dev-seeds",
         "drupal/metatag": "1.22",
         "drupal/pathauto": "1.11",
         "drupal/simple_sitemap": "4.1.3",
