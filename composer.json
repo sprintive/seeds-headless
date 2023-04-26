@@ -5,7 +5,9 @@
     "license": "GPL-2.0-or-later",
     "require": {
         "composer/installers": "^2.0",
+        "cweagans/composer-patches": "1.7.3",
         "drupal/core-composer-scaffold": "^10.0",
+        "drush/drush": "*",
         "drupal/core": "10.0.8",
         "drupal/root": "2.0.0-alpha1",
         "drupal/webform": "6.2.0-beta5",
@@ -21,7 +23,7 @@
         "drupal/layout_builder_modal": "1.2",
         "drupal/entityqueue": "1.6",
         "drupal/admin_toolbar": "3.3.0",
-        "drupal/seeds_toolbar": "1.21",
+        "drupal/seeds_toolbar": "2.0.0-beta2",
         "drupal/media_embeddable": "1.1.0",
         "drupal/rabbit_hole": "1.0-beta11",
         "drupal/menu_admin_per_menu": "1.5",
@@ -53,11 +55,8 @@
         "drupal/login_security": "2.0.1",
         "drupal/session_limit": "2.0.0-beta3",
         "drupal/seckit": "2.0.1",
-        "drupal/remove_http_headers": "2.0.0"
-    },
-    "require-dev": {
-        "drush/drush": "*",
-        "drupal/console": "*"
+        "drupal/remove_http_headers": "2.0.0",
+        "drupal/media_library_edit": " 3.0.2"
     },
     "conflict": {
         "drupal/drupal": "*"
@@ -83,7 +82,33 @@
         }
     ],
     "extra": {
-        "patches": [],
+        "patches": {
+            "drupal/core": {
+              "Issue #2986041: Fix multiple ajax calls problem, which causes the browser to be in an infinite loop thus causing a crash.": "https://www.drupal.org/files/issues/2022-11-07/2986041-25.patch"
+            },
+            "drupal/focal_point": {
+              "Issue #3094478: Integrate focal point with media_library": "https://www.drupal.org/files/issues/2020-01-09/3094478-10.patch"
+            },
+            "drupal/block_content_permissions": {
+              "Issue #2920739: Allow accessing the Custom block library page without Administer blocks permission": "https://www.drupal.org/files/issues/2018-03-17/block_content_permissions-2920739-16.patch"
+            },
+            "drupal/shariff": {
+              "Issue #3060551: data-url should be the url of the node.": "https://www.drupal.org/files/issues/2019-06-10/shariff-node-data-url-3060551-3.patch"
+            },
+            "drupal/paragraphs": {
+              "Issue #2901390: Integrity constraint violation: 1048 Column 'langcode' cannot be null": "https://www.drupal.org/files/issues/2019-08-10/paragraphs-set_langcode_widgets-290139_updated.patch"
+            },
+            "drupal/yoast_seo": {
+              "Issue #3204023: Style issues on mobile": "https://www.drupal.org/files/issues/2021-03-17/style_issues_on_mobile-3204023-3.patch",
+              "Issue #3125252: I can't translate SEO Content analysis": "https://www.drupal.org/files/issues/2021-03-17/i_cant_translate_seo_content_analysis-3125252-4.patch"
+            },
+            "drupal/simple_sitemap": {
+              "Issue #2987748: Add Media images to sitemap": "https://www.drupal.org/files/issues/2022-06-22/simple_sitemap_support_media_and_image_styles-2987748-60.patch"
+            },
+            "drupal/webp": {
+              "Issue #3256454: Error \"Could not generate image resource from URI\" on non-image formats": "https://www.drupal.org/files/issues/2022-02-15/check_private_file_image_is_valid_3256454_02.patch"
+            }
+          },
         "patchLevel": {
             "drupal/core": "-p2"
         },
