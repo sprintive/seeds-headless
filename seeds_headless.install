@@ -1,0 +1,35 @@
+<?php
+
+/**
+ * @file
+ * Install, update and uninstall functions for the seeds_headless profile.
+ */
+
+use Drupal\views\Entity\View;
+
+/**
+ * Implements hook_install().
+ */
+function seeds_headless_install() {
+  // Set front page to "user".
+  if (Drupal::moduleHandler()->moduleExists('user')) {
+    Drupal::configFactory()
+      ->getEditable('system.site')
+      ->set('page.front', '/user')
+      ->save(TRUE);
+  }
+
+  // Disable frontpage andd taxonomy term view page.
+  View::load('frontpage')
+    ->disable()
+    ->save();
+  View::load('taxonomy_term')
+    ->disable()
+    ->save();
+
+  // Enable the admin theme.
+  Drupal::configFactory()
+    ->getEditable('node.settings')
+    ->set('use_admin_theme', TRUE)
+    ->save(TRUE);
+}
