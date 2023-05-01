@@ -123,7 +123,6 @@
   "extra": {
     "patches": {
       "drupal/core": {
-        "Issue #2986041: Fix multiple ajax calls problem, which causes the browser to be in an infinite loop thus causing a crash.": "https://www.drupal.org/files/issues/2022-11-07/2986041-25.patch",
         "Issue #3088239: Revisions on relations are not loaded correctly resulting in wrong data in includes": "https://www.drupal.org/files/issues/2022-09-27/3088239-33.patch",
         "Make BaseFieldOverride inherit internal property from the base field": "https://www.drupal.org/files/issues/2022-04-09/drupal-base-field-override-inherit-internal-3274419-2-9.4.patch",
         "Issue #2073837: Validation errors on form elements without #access": "https://www.drupal.org/files/issues/2022-03-21/form-validation-errors-2073837-33.patch",
@@ -147,16 +146,13 @@
         "Support uploading files": "https://www.drupal.org/files/issues/2022-06-08/webform_rest-add_file_upload_resource-2899902-47_1.patch"
       },
       "drupal/decoupled_router": {
-        "Unable to resolve path on node in other language than default": "https://www.drupal.org/files/issues/2021-05-05/3111456-34.patch"
+        "Unable to resolve path on node in other language than default": "https://www.drupal.org/files/issues/2023-03-22/decouple_router-3111456-resolve-language-issue-63--get-translation.patch"
       },
       "drupal/metatag": {
         "Support JSON API, REST, GraphQL and custom normalizations": "https://www.drupal.org/files/issues/2022-10-13/metatag-data-type-support-2945817-154.patch"
       },
       "drupal/field_group": {
-        "Issue #3111107: Field Group Label are not translating": "https://www.drupal.org/files/issues/2021-11-22/field_group_fix-translations_label_description-3111107-31.patch"
-      },
-      "drupal/openapi_jsonapi": {
-        "Issue #3079209: Hide POST, PUT, and DELETE endpoints when JSON:API is configured to be read-only": "https://www.drupal.org/files/issues/2022-03-25/hide-post-put-delete-3079209-21.patch"
+        "Issue #3111107: Field Group Label are not translating": "https://www.drupal.org/files/issues/2023-04-26/field_group_fix-translations_label_description-3111107-48.patch"
       },
       "drupal/layoutbuilder_search_api": {
         "Issue #3334553: Custom blocks that are not created inside layout builder are not indexed": "https://www.drupal.org/files/issues/2023-01-22/indexing_custom_block-3334553-6.patch"
