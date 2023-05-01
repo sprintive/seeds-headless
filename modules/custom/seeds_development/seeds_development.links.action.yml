@@ -1,8 +1,0 @@
-seeds_development.form_groups_generator:
-  class: \Drupal\seeds_development\SeedsLocalAction
-  deriver: \Drupal\seeds_development\Plugin\Derivative\GroupsGeneratorLocalActions
-seeds_development.unused_image_styles:
-  route_name: seeds_development.unused_image_style
-  title: 'Unused image styles'
-  appears_on:
-    - entity.image_style.collection

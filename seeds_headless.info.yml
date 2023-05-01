@@ -34,6 +34,10 @@ dependencies:
   - drupal:automated_cron
   - drupal:help
   - drupal:fast404
+  - drupal:seeds_editor
+  - drupal:seeds_media
+  - drupal:seeds_pollination
+  - drupal:seeds_development
   - views_bulk_operations:views_bulk_operations
   - views_bulk_edit:views_bulk_edit
   - admin_toolbar:admin_toolbar_links_access_filter
@@ -46,7 +50,8 @@ dependencies:
   - field_group:field_group
 
   # Custom modules
-  - seeds_development:seeds_development
+  - seeds_headless_seo:seeds_headless_seo
+  - seeds_headless_security:seeds_headless_security
 
 themes:
   - root

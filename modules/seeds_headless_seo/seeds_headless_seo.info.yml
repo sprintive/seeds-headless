@@ -1,0 +1,15 @@
+name: "Seeds Headless SEO"
+description: Starter Module to enable all SEO modules
+type: module
+version: "1.0.1"
+core_version_requirement: "^10"
+dependencies:
+  - metatag
+  - metatag_facebook
+  - metatag_open_graph
+  - simple_sitemap
+  - redirect
+  - pathauto
+  - link_attributes
+  - length_indicator
+package: "Seeds Headless Using NextJS"

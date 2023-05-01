@@ -1,190 +1,264 @@
 {
-    "name": "sprintive/seeds_headless",
-    "description": "Project template for Drupal projects with a relocated document root",
-    "type": "drupal-profile",
-    "license": "GPL-2.0-or-later",
-    "require": {
-        "composer/installers": "^2.0",
-        "cweagans/composer-patches": "1.7.3",
-        "drupal/core-composer-scaffold": "^10.0",
-        "drush/drush": "*",
-        "drupal/core": "10.0.8",
-        "drupal/root": "2.0.0-alpha3",
-        "drupal/webform": "6.2.0-beta5",
-        "drupal/field_group": "3.4",
-        "drupal/linkit": "6.0.0-rc1",
-        "drupal/seeds_layouts": "2.0.0",
-        "drupal/crop": "2.3",
-        "drupal/focal_point": "2.0.0-alpha2",
-        "drupal/smart_trim": "2.0.0",
-        "drupal/allowed_formats": "2.0.0",
-        "drupal/paragraphs": "1.15",
-        "drupal/layout_builder_restrictions": "2.17",
-        "drupal/layout_builder_modal": "1.2",
-        "drupal/entityqueue": "1.6",
-        "drupal/admin_toolbar": "3.3.0",
-        "drupal/seeds_toolbar": "2.0.0-beta2",
-        "drupal/media_embeddable": "1.1.0",
-        "drupal/rabbit_hole": "1.0-beta11",
-        "drupal/menu_admin_per_menu": "1.5",
-        "drupal/taxonomy_access_fix": "4.0.0-beta1",
-        "drupal/block_content_permissions": "1.11",
-        "drupal/masquerade": "2.0-rc1",
-        "drupal/views_bulk_operations": "4.2.2",
-        "drupal/views_bulk_edit": "2.8",
-        "drupal/diff": "1.1",
-        "drupal/transliterate_filenames": "2.0.1",
-        "drupal/editor_advanced_link": "2.1.1",
-        "drupal/ace_editor": "2.0.0-alpha1",
-        "drupal/ckeditor_bidi": "4.0.0",
-        "drupal/fast_404": "dev-seeds",
-        "drupal/metatag": "1.22",
-        "drupal/pathauto": "1.11",
-        "drupal/simple_sitemap": "4.1.3",
-        "drupal/link_attributes": "1.12",
-        "drupal/redirect": "1.8",
-        "drupal/yoast_seo": "1.8",
-        "drupal/length_indicator": "1.2",
-        "drupal/cloudflare": "2.0.0-alpha1",
-        "drupal/ultimate_cron": "2.0-alpha6",
-        "drupal/smtp": "1.2",
-        "drupal/captcha": "1.8",
-        "drupal/recaptcha": "3.1",
-        "drupal/password_policy": "4.0.0",
-        "drupal/username_enumeration_prevention": "1.3",
-        "drupal/login_security": "2.0.1",
-        "drupal/session_limit": "2.0.0-beta3",
-        "drupal/seckit": "2.0.1",
-        "drupal/remove_http_headers": "2.0.0",
-        "drupal/media_library_edit": " 3.0.2"
+  "name": "sprintive/seeds_headless",
+  "description": "Project template for Drupal projects with a relocated document root",
+  "type": "drupal-profile",
+  "license": "GPL-2.0-or-later",
+  "require": {
+    "composer/installers": "^2.0",
+    "cweagans/composer-patches": "1.7.3",
+    "drupal/core-composer-scaffold": "^10.0",
+    "drush/drush": "*",
+    "drupal/core": "10.0.8",
+    "drupal/root": "2.0.0-alpha3",
+    "drupal/webform": "6.2.0-beta5",
+    "drupal/field_group": "3.4",
+    "drupal/linkit": "6.0.0-rc1",
+    "drupal/seeds_layouts": "2.0.0",
+    "drupal/crop": "2.3",
+    "drupal/focal_point": "2.0.0-alpha2",
+    "drupal/smart_trim": "2.0.0",
+    "drupal/allowed_formats": "2.0.0",
+    "drupal/paragraphs": "1.15",
+    "drupal/layout_builder_restrictions": "2.17",
+    "drupal/layout_builder_modal": "1.2",
+    "drupal/entityqueue": "1.6",
+    "drupal/admin_toolbar": "3.3.0",
+    "drupal/seeds_toolbar": "2.0.0-beta2",
+    "drupal/media_embeddable": "1.1.0",
+    "drupal/rabbit_hole": "1.0-beta11",
+    "drupal/menu_admin_per_menu": "1.5",
+    "drupal/taxonomy_access_fix": "4.0.0-beta1",
+    "drupal/block_content_permissions": "1.11",
+    "drupal/masquerade": "2.0-rc1",
+    "drupal/views_bulk_operations": "4.2.2",
+    "drupal/views_bulk_edit": "2.8",
+    "drupal/diff": "1.1",
+    "drupal/transliterate_filenames": "2.0.1",
+    "drupal/editor_advanced_link": "2.1.1",
+    "drupal/ace_editor": "2.0.0-alpha1",
+    "drupal/ckeditor_bidi": "4.0.0",
+    "drupal/fast_404": "dev-seeds",
+    "drupal/metatag": "1.22",
+    "drupal/pathauto": "1.11",
+    "drupal/simple_sitemap": "4.1.3",
+    "drupal/link_attributes": "1.12",
+    "drupal/redirect": "1.8",
+    "drupal/yoast_seo": "1.8",
+    "drupal/length_indicator": "1.2",
+    "drupal/cloudflare": "2.0.0-alpha1",
+    "drupal/ultimate_cron": "2.0-alpha6",
+    "drupal/smtp": "1.2",
+    "drupal/captcha": "1.8",
+    "drupal/recaptcha": "3.1",
+    "drupal/password_policy": "4.0.0",
+    "drupal/username_enumeration_prevention": "1.3",
+    "drupal/login_security": "2.0.1",
+    "drupal/session_limit": "2.0.0-beta3",
+    "drupal/seckit": "2.0.1",
+    "drupal/remove_http_headers": "2.0.0",
+    "drupal/media_library_edit": " 3.0.2",
+    "drupal/jsonapi_response_alter": "dev-seeds",
+    "drupal/cloudflare_node_cc": "^1.0",
+    "drupal/layoutbuilder_search_api": "^1.0",
+    "drupal/redis": "^1.6",
+    "drupal/config_split": "^1.9",
+    "drupal/openapi_ui_swagger": "^1.0@RC",
+    "drupal/openapi": "^2.1",
+    "drupal/openapi_jsonapi": "3.x-dev@dev",
+    "drupal/search_api_solr": "^4.2",
+    "drupal/better_exposed_filters": "^6.0",
+    "drupal/image_effects": "^3.4",
+    "drupal/votingapi": "^3.0@beta",
+    "drupal/disable_user_1_edit": "^1.6",
+    "drupal/override_node_options": "^2.7",
+    "drupal/config_ignore": "^2.4",
+    "drupal/webform_rest": "^4.0",
+    "drupal/next": "^1.6",
+    "drupal/jsonapi_views": "^1.0",
+    "drupal/jsonapi_menu_items": "^1.2",
+    "drupal/jsonapi_extras": "^3.23",
+    "drupal/jsonapi_search_api": "3288250-seeds",
+    "drupal/jwt": "^1.1",
+    "drupal/key": "^1.17",
+    "drupal/consumer_image_styles": "^4.0",
+    "drupal/preview_link": "^2.1@alpha",
+    "drupal/seeds_editor": "^1.0",
+    "drupal/seeds_media": "^1.0",
+    "drupal/seeds_pollination": "^1.0",
+    "drupal/seeds_development": "^1.0"
+  },
+  "conflict": {
+    "drupal/drupal": "*"
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://packages.drupal.org/8",
+      "exclude": [
+        "drupal/fast_404",
+        "drupal/ckeditor_iframe",
+        "drupal/jsonapi_response_alter",
+        "drupal/jsonapi_search_api"
+      ]
     },
-    "conflict": {
-        "drupal/drupal": "*"
+    {
+      "type": "git",
+      "url": "https://git.drupalcode.org/issue/fast_404-3287465.git"
     },
-    "minimum-stability": "dev",
-    "prefer-stable": true,
-    "repositories": [
-        {
-            "type": "composer",
-            "url": "https://packages.drupal.org/8",
-            "exclude": [
-                "drupal/fast_404",
-                "drupal/ckeditor_iframe"
-            ]
-        },
-        {
-            "type": "git",
-            "url": "https://git.drupalcode.org/issue/fast_404-3287465.git"
-        },
-        {
-        "type": "git",
-        "url": "https://git.drupalcode.org/issue/ckeditor_iframe-3286496.git"
-        }
+    {
+      "type": "git",
+      "url": "https://git.drupalcode.org/issue/jsonapi_response_alter-3288148.git"
+    },
+    {
+      "type": "git",
+      "url": "https://git.drupalcode.org/issue/ckeditor_iframe-3286496.git"
+    },
+    {
+      "type": "git",
+      "url": "https://git.drupalcode.org/issue/layoutbuilder_search_api-3288250.git"
+    }
+  ],
+  "extra": {
+    "patches": {
+      "drupal/core": {
+        "Issue #2986041: Fix multiple ajax calls problem, which causes the browser to be in an infinite loop thus causing a crash.": "https://www.drupal.org/files/issues/2022-11-07/2986041-25.patch",
+        "Issue #3088239: Revisions on relations are not loaded correctly resulting in wrong data in includes": "https://www.drupal.org/files/issues/2022-09-27/3088239-33.patch",
+        "Make BaseFieldOverride inherit internal property from the base field": "https://www.drupal.org/files/issues/2022-04-09/drupal-base-field-override-inherit-internal-3274419-2-9.4.patch",
+        "Issue #2073837: Validation errors on form elements without #access": "https://www.drupal.org/files/issues/2022-03-21/form-validation-errors-2073837-33.patch",
+        "Issue #1038316: Allow for deletion of a single value of a multiple value field": "https://www.drupal.org/files/issues/2021-12-01/1038316-242.patch",
+        "Issue #2816447: Get feed title in correct language": "https://www.drupal.org/files/issues/2022-07-19/2816447-49.patch",
+        "Issue #2816447: Clean up Claro unused images": "https://www.drupal.org/files/issues/2023-01-08/3092984-27.patch"
+      },
+      "drupal/facets": {
+        "Facets Serializer Pagination": "https://www.drupal.org/files/issues/2019-04-30/facets-rest_pager-3008615-7.patch"
+      },
+      "drupal/jsonapi_extras": {
+        "Invalid output JSON schema in UrlLinkEnhancer": "https://www.drupal.org/files/issues/2022-09-08/3232279-12.patch"
+      },
+      "drupal/subrequests": {
+        "Get same results on different request": "https://www.drupal.org/files/issues/2019-07-18/change_request_type-63049395-09.patch"
+      },
+      "drupal/jsonapi_views": {
+        "Additinonal meta information about the view": "https://www.drupal.org/files/issues/2022-08-22/meta_should_include_more_information-3292906-4.patch"
+      },
+      "drupal/webform_rest": {
+        "Support uploading files": "https://www.drupal.org/files/issues/2022-06-08/webform_rest-add_file_upload_resource-2899902-47_1.patch"
+      },
+      "drupal/decoupled_router": {
+        "Unable to resolve path on node in other language than default": "https://www.drupal.org/files/issues/2021-05-05/3111456-34.patch"
+      },
+      "drupal/metatag": {
+        "Support JSON API, REST, GraphQL and custom normalizations": "https://www.drupal.org/files/issues/2022-10-13/metatag-data-type-support-2945817-154.patch"
+      },
+      "drupal/field_group": {
+        "Issue #3111107: Field Group Label are not translating": "https://www.drupal.org/files/issues/2021-11-22/field_group_fix-translations_label_description-3111107-31.patch"
+      },
+      "drupal/openapi_jsonapi": {
+        "Issue #3079209: Hide POST, PUT, and DELETE endpoints when JSON:API is configured to be read-only": "https://www.drupal.org/files/issues/2022-03-25/hide-post-put-delete-3079209-21.patch"
+      },
+      "drupal/layoutbuilder_search_api": {
+        "Issue #3334553: Custom blocks that are not created inside layout builder are not indexed": "https://www.drupal.org/files/issues/2023-01-22/indexing_custom_block-3334553-6.patch"
+      },
+      "drupal/jsonapi_response_alter": {
+        "Issue #3341933 Add support to JSON:API Menu Items module": "https://www.drupal.org/files/issues/2023-02-15/add-support-to-json-api-menu-items-module-3341933-3.patch"
+      },
+      "drupal/focal_point": {
+        "Issue #3094478: Integrate focal point with media_library": "https://www.drupal.org/files/issues/2020-01-09/3094478-10.patch"
+      },
+      "drupal/block_content_permissions": {
+        "Issue #2920739: Allow accessing the Custom block library page without Administer blocks permission": "https://www.drupal.org/files/issues/2018-03-17/block_content_permissions-2920739-16.patch"
+      },
+      "drupal/paragraphs": {
+        "Issue #2901390: Integrity constraint violation: 1048 Column 'langcode' cannot be null": "https://www.drupal.org/files/issues/2019-08-10/paragraphs-set_langcode_widgets-290139_updated.patch"
+      },
+      "drupal/yoast_seo": {
+        "Issue #3204023: Style issues on mobile": "https://www.drupal.org/files/issues/2021-03-17/style_issues_on_mobile-3204023-3.patch",
+        "Issue #3125252: I can't translate SEO Content analysis": "https://www.drupal.org/files/issues/2021-03-17/i_cant_translate_seo_content_analysis-3125252-4.patch"
+      },
+      "drupal/simple_sitemap": {
+        "Issue #2987748: Add Media images to sitemap": "https://www.drupal.org/files/issues/2022-06-22/simple_sitemap_support_media_and_image_styles-2987748-60.patch"
+      }
+    },
+    "patchLevel": {
+      "drupal/core": "-p2"
+    },
+    "drupal-scaffold": {
+      "locations": {
+        "web-root": "public_html/"
+      }
+    },
+    "installer-paths": {
+      "public_html/core": [
+        "type:drupal-core"
+      ],
+      "public_html/libraries/{$name}": [
+        "type:drupal-library"
+      ],
+      "public_html/modules/contrib/{$name}": [
+        "type:drupal-module"
+      ],
+      "public_html/profiles/contrib/{$name}": [
+        "type:drupal-profile"
+      ],
+      "public_html/themes/contrib/{$name}": [
+        "type:drupal-theme"
+      ],
+      "drush/Commands/contrib/{$name}": [
+        "type:drupal-drush"
+      ],
+      "public_html/modules/custom/{$name}": [
+        "type:drupal-custom-module"
+      ],
+      "public_html/profiles/custom/{$name}": [
+        "type:drupal-custom-profile"
+      ],
+      "public_html/themes/custom/{$name}": [
+        "type:drupal-custom-theme"
+      ]
+    }
+  },
+  "scripts": {
+    "post-install-cmd": [
+      "DrupalComposer\\DrupalScaffold\\Plugin::scaffold"
     ],
-    "extra": {
-        "patches": {
-            "drupal/core": {
-              "Issue #2986041: Fix multiple ajax calls problem, which causes the browser to be in an infinite loop thus causing a crash.": "https://www.drupal.org/files/issues/2022-11-07/2986041-25.patch"
-            },
-            "drupal/focal_point": {
-              "Issue #3094478: Integrate focal point with media_library": "https://www.drupal.org/files/issues/2020-01-09/3094478-10.patch"
-            },
-            "drupal/block_content_permissions": {
-              "Issue #2920739: Allow accessing the Custom block library page without Administer blocks permission": "https://www.drupal.org/files/issues/2018-03-17/block_content_permissions-2920739-16.patch"
-            },
-            "drupal/shariff": {
-              "Issue #3060551: data-url should be the url of the node.": "https://www.drupal.org/files/issues/2019-06-10/shariff-node-data-url-3060551-3.patch"
-            },
-            "drupal/paragraphs": {
-              "Issue #2901390: Integrity constraint violation: 1048 Column 'langcode' cannot be null": "https://www.drupal.org/files/issues/2019-08-10/paragraphs-set_langcode_widgets-290139_updated.patch"
-            },
-            "drupal/yoast_seo": {
-              "Issue #3204023: Style issues on mobile": "https://www.drupal.org/files/issues/2021-03-17/style_issues_on_mobile-3204023-3.patch",
-              "Issue #3125252: I can't translate SEO Content analysis": "https://www.drupal.org/files/issues/2021-03-17/i_cant_translate_seo_content_analysis-3125252-4.patch"
-            },
-            "drupal/simple_sitemap": {
-              "Issue #2987748: Add Media images to sitemap": "https://www.drupal.org/files/issues/2022-06-22/simple_sitemap_support_media_and_image_styles-2987748-60.patch"
-            },
-            "drupal/webp": {
-              "Issue #3256454: Error \"Could not generate image resource from URI\" on non-image formats": "https://www.drupal.org/files/issues/2022-02-15/check_private_file_image_is_valid_3256454_02.patch"
-            }
-          },
-        "patchLevel": {
-            "drupal/core": "-p2"
-        },
-        "drupal-scaffold": {
-            "locations": {
-                "web-root": "public_html/"
-            }
-        },
-        "installer-paths": {
-            "public_html/core": [
-                "type:drupal-core"
-            ],
-            "public_html/libraries/{$name}": [
-                "type:drupal-library"
-            ],
-            "public_html/modules/contrib/{$name}": [
-                "type:drupal-module"
-            ],
-            "public_html/profiles/contrib/{$name}": [
-                "type:drupal-profile"
-            ],
-            "public_html/themes/contrib/{$name}": [
-                "type:drupal-theme"
-            ],
-            "drush/Commands/contrib/{$name}": [
-                "type:drupal-drush"
-            ],
-            "public_html/modules/custom/{$name}": [
-                "type:drupal-custom-module"
-            ],
-            "public_html/profiles/custom/{$name}": [
-                "type:drupal-custom-profile"
-            ],
-            "public_html/themes/custom/{$name}": [
-                "type:drupal-custom-theme"
-            ]
-        }
-    },
-    "scripts": {
-        "post-install-cmd": [
-            "DrupalComposer\\DrupalScaffold\\Plugin::scaffold"
-        ],
-        "post-update-cmd": [
-            "DrupalComposer\\DrupalScaffold\\Plugin::scaffold"
-        ]
-    },
-    "config": {
-        "allow-plugins": {
-            "composer/installers": true,
-            "drupal/core-composer-scaffold": true,
-            "phpstan/extension-installer": true,
-            "dealerdirect/phpcodesniffer-composer-installer": true
-        },
-        "sort-packages": true,
-        "bin-dir": "bin/"
-    },
-    "authors": [
-        {
-            "name": "Sprintive",
-            "homepage": "http://sprintive.com",
-            "role": "Supporting Organization"
-        },
-        {
-            "name": "Mohammad Abdul-Qader",
-            "homepage": "https://www.drupal.org/u/mabdulqader",
-            "role": "Maintainer"
-        },
-        {
-            "name": "Ahmad Alyasaki",
-            "homepage": "https://www.drupal.org/u/ahmad-alyasaki",
-            "role": "Maintainer"
-        },
-        {
-            "name": "Yahya Al Hamad",
-            "homepage": "https://www.drupal.org/u/yahyaalhamad",
-            "role": "Maintainer"
-        }
+    "post-update-cmd": [
+      "DrupalComposer\\DrupalScaffold\\Plugin::scaffold"
     ]
+  },
+  "config": {
+    "allow-plugins": {
+      "composer/installers": true,
+      "drupal/core-composer-scaffold": true,
+      "phpstan/extension-installer": true,
+      "dealerdirect/phpcodesniffer-composer-installer": true,
+      "oomphinc/composer-installers-extender": true,
+      "cweagans/composer-patches": true
+    },
+    "sort-packages": true,
+    "bin-dir": "bin/"
+  },
+  "authors": [
+    {
+      "name": "Sprintive",
+      "homepage": "http://sprintive.com",
+      "role": "Supporting Organization"
+    },
+    {
+      "name": "Mohammad Abdul-Qader",
+      "homepage": "https://www.drupal.org/u/mabdulqader",
+      "role": "Maintainer"
+    },
+    {
+      "name": "Ahmad Alyasaki",
+      "homepage": "https://www.drupal.org/u/ahmad-alyasaki",
+      "role": "Maintainer"
+    },
+    {
+      "name": "Yahya Al Hamad",
+      "homepage": "https://www.drupal.org/u/yahyaalhamad",
+      "role": "Maintainer"
+    }
+  ]
 }

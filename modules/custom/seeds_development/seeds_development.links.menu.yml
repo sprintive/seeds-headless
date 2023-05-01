@@ -1,6 +1,0 @@
-seeds_development.test_responsive_images:
-  title: 'Test'
-  description: 'Test all responsive image styles.'
-  weight: 10
-  route_name: seeds_development.test_responsive_images
-  parent: entity.responsive_image_style.collection

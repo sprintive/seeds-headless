@@ -1,0 +1,17 @@
+name: "Seeds Headless Security & Performance"
+description: Starter Module to enable all security modules
+type: module
+version: "1.0.1"
+core_version_requirement: "^10"
+dependencies:
+  - username_enumeration_prevention
+  - captcha
+  - recaptcha
+  - password_policy
+  - disable_user_1_edit
+  - remove_http_headers
+  - seckit
+  - session_limit
+  - login_security
+
+package: "Seeds Headless Using NextJS"

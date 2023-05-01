@@ -1,7 +1,0 @@
-services:
-  logger.channel.seeds_development:
-    parent: logger.channel_base
-    arguments: ["seeds_development"]
-  seeds_development.inspector:
-    class: Drupal\seeds_development\SeedsDevelopmentInspector
-    arguments: ["@entity_type.manager", "@config.factory", "@module_handler"]

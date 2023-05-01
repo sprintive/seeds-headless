@@ -1,4 +1,0 @@
-responsive_image_style_test:
-  css:
-    component:
-      assets/css/responsive-image-style-list.css: {}

@@ -1,5 +1,0 @@
-name: 'Seeds Development'
-type: module
-description: 'Provides helpful functionalities for developers'
-core_version_requirement: '^9 || ^10'
-package: 'Seeds'
