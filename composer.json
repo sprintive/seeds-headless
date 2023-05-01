@@ -77,7 +77,7 @@
     "drupal/jsonapi_views": "^1.0",
     "drupal/jsonapi_menu_items": "^1.2",
     "drupal/jsonapi_extras": "^3.23",
-    "drupal/jsonapi_search_api": "3288250-seeds",
+    "drupal/jsonapi_search_api": "3288250-seeds-dev",
     "drupal/jwt": "^1.1",
     "drupal/key": "^1.17",
     "drupal/consumer_image_styles": "^4.0",
