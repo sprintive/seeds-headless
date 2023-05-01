@@ -59,7 +59,7 @@
     "drupal/media_library_edit": " 3.0.2",
     "drupal/jsonapi_response_alter": "dev-seeds",
     "drupal/cloudflare_node_cc": "^1.0",
-    "drupal/layoutbuilder_search_api": "^1.0",
+    "drupal/layoutbuilder_search_api": "3288250-seeds-dev",
     "drupal/redis": "^1.6",
     "drupal/config_split": "^1.9",
     "drupal/openapi_ui_swagger": "^1.0@RC",
@@ -77,7 +77,7 @@
     "drupal/jsonapi_views": "^1.0",
     "drupal/jsonapi_menu_items": "^1.2",
     "drupal/jsonapi_extras": "^3.23",
-    "drupal/jsonapi_search_api": "3288250-seeds-dev",
+    "drupal/jsonapi_search_api": "^1.0@RC",
     "drupal/jwt": "^1.1",
     "drupal/key": "^1.17",
     "drupal/consumer_image_styles": "^4.0",
@@ -100,7 +100,7 @@
         "drupal/fast_404",
         "drupal/ckeditor_iframe",
         "drupal/jsonapi_response_alter",
-        "drupal/jsonapi_search_api"
+        "drupal/layoutbuilder_search_api"
       ]
     },
     {
