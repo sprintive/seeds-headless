@@ -6,6 +6,7 @@
  */
 
 use Drupal\views\Entity\View;
+use Drupal\user\Entity\User;
 
 function isDirectory($uri) {
   return @is_dir($uri);
@@ -37,12 +38,8 @@ function seeds_headless_install() {
     ->set('use_admin_theme', TRUE)
     ->save(TRUE);
 
-  // Load the User module and get the user entity type.
-  $moduleHandler = \Drupal::service('module_handler');
-  $userEntityType = $moduleHandler->invoke('user', 'entity_type_info')['user'];
-
   // Create a new user entity object.
-  $user = $userEntityType->create([
+  $user = User::create([
     'name' => 'Nextjs',
     'mail' => 'nextjs@sprintive.com',
     'pass' => 'password',

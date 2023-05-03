@@ -3,7 +3,6 @@ status: true
 dependencies:
   module:
     - block_content_permissions
-    - layout_builder
     - node
     - paragraphs
     - rest
@@ -18,7 +17,6 @@ permissions:
   - "access any webform configuration"
   - "access user profiles"
   - "bypass node access"
-  - "create and edit custom blocks"
   - "issue subrequests"
   - "view all revisions"
   - "view restricted block content"
