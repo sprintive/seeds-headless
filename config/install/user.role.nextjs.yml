@@ -1,0 +1,25 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content_permissions
+    - layout_builder
+    - node
+    - paragraphs
+    - rest
+    - subrequests
+    - taxonomy_access_fix
+    - webform
+id: nextjs
+label: NextJS
+weight: 2
+is_admin: null
+permissions:
+  - "access any webform configuration"
+  - "access user profiles"
+  - "bypass node access"
+  - "create and edit custom blocks"
+  - "issue subrequests"
+  - "view all revisions"
+  - "view restricted block content"
+  - "view unpublished paragraphs"

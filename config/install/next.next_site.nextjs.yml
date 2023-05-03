@@ -1,0 +1,10 @@
+langcode: en
+status: true
+dependencies: {}
+id: nextjs
+label: NextJS
+base_url: "http://localhost:3000"
+preview_url: "http://localhost:3000/api/preview"
+preview_secret: jmIV7hX2tYXwj4aAzf7c
+revalidate_url: "http://localhost:3000/api/revalidate"
+revalidate_secret: jmIV7hX2tYXwj4aAzf7c

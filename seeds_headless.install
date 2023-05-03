@@ -7,6 +7,10 @@
 
 use Drupal\views\Entity\View;
 
+function isDirectory($uri) {
+  return @is_dir($uri);
+}
+
 /**
  * Implements hook_install().
  */
@@ -32,4 +36,40 @@ function seeds_headless_install() {
     ->getEditable('node.settings')
     ->set('use_admin_theme', TRUE)
     ->save(TRUE);
+
+  // Load the User module and get the user entity type.
+  $moduleHandler = \Drupal::service('module_handler');
+  $userEntityType = $moduleHandler->invoke('user', 'entity_type_info')['user'];
+
+  // Create a new user entity object.
+  $user = $userEntityType->create([
+    'name' => 'Nextjs',
+    'mail' => 'nextjs@sprintive.com',
+    'pass' => 'password',
+    'status' => 1,
+  ]);
+
+  // Set the user's roles.
+  $roles = ['authenticated', 'nextjs'];
+  $user->set('roles', $roles);
+
+  // Save the user entity.
+  $user->save();
+
+  // Generate public and private keys
+  if (Drupal::moduleHandler()->moduleExists('simple_oauth')) {
+    $dir_path = Drupal::root();
+    /**
+     * @var Drupal\Core\File\FileSystem $fileSystemService
+     */
+    $fileSystemService = \Drupal::service('file_system');
+    $path = dirname($dir_path) . '/key';
+    if (!isDirectory($path)) {
+      $fileSystemService->mkdir($path, 0777, TRUE);
+    }
+    $keys_path = $fileSystemService->realpath($path);
+  
+    $moduleKeyHandler = \Drupal::service('simple_oauth.key.generator');
+    $moduleKeyHandler->generateKeys($keys_path);
+  }
 }
