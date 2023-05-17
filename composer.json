@@ -28,7 +28,7 @@
     "drupal/media_embeddable": "1.1.0",
     "drupal/rabbit_hole": "1.0-beta11",
     "drupal/menu_admin_per_menu": "1.5",
-    "drupal/taxonomy_access_fix": "4.0.0-beta1",
+    "drupal/taxonomy_access_fix": "4.0.0",
     "drupal/block_content_permissions": "1.11",
     "drupal/masquerade": "2.0-rc1",
     "drupal/views_bulk_operations": "4.2.3",
