@@ -1,7 +1,7 @@
 name: Seeds Headless Using NextJS
 type: profile
 description: "Kickoff distribution for SMEs using Next.Js, Curated by Sprintive."
-version: "1.0.0-beta-2"
+version: "1.0.x-dev"
 project: seeds_headless
 core_version_requirement: "^10"
 distribution:
