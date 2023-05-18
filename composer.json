@@ -144,7 +144,7 @@
         "Additinonal meta information about the view": "https://www.drupal.org/files/issues/2022-08-22/meta_should_include_more_information-3292906-4.patch"
       },
       "drupal/webform_rest": {
-        "Support uploading files": "https://www.drupal.org/files/issues/2022-06-08/webform_rest-add_file_upload_resource-2899902-47_1.patch"
+        "Support uploading files": "https://www.drupal.org/files/issues/2023-05-10/webform_rest-add_file_upload_resource-2899902-56-v4.x.patch"
       },
       "drupal/decoupled_router": {
         "Unable to resolve path on node in other language than default": "https://www.drupal.org/files/issues/2023-03-22/decouple_router-3111456-resolve-language-issue-63--get-translation.patch"
