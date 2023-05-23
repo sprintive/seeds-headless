@@ -1,2 +1,13 @@
-route_callbacks:
-  - '\Drupal\seeds_nextjs\Routing\Routes::routes'
+services:
+  # Event subscriber.
+  seeds_headless_helper.event_subscriber:
+    class: Drupal\seeds_headless_helper\Event\RequestEventSubscriber
+    tags:
+      - { name: event_subscriber }
+  cache_tags.invalidator.seeds_nextjs:
+    class: Drupal\seeds_headless_helper\SeedsNextJsCacheTagsInvalidator
+    tags:
+      - { name: cache_tags_invalidator }
+  seeds_headless_helper.requester:
+    class: Drupal\seeds_headless_helper\SeedsNextJsRequester
+    arguments: []

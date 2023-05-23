@@ -1,0 +1,10 @@
+route_callbacks:
+  - '\Drupal\seeds_nextjs\Routing\Routes::routes'
+
+seeds_headless_helper.settings:
+  path: "/admin/config/seeds-nextjs-helper"
+  defaults:
+    _form: '\Drupal\seeds_headless_helper\Form\SeedsNextJsSettings'
+    _title: "Seeds Next.js"
+  requirements:
+    _permission: "administer site configuration"
