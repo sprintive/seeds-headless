@@ -8,7 +8,7 @@ use Drupal\Core\Entity\EntityInterface;
 /**
  * Implements hook_entity_base_field_info().
  */
-function seeds_nextjs_entity_base_field_info(EntityTypeInterface $entity_type) {
+function seeds_headless_helper_entity_base_field_info(EntityTypeInterface $entity_type) {
   $fields = [];
 
   if ($entity_type->id() == 'node' || $entity_type->id() === 'taxonomy_term') {
@@ -20,8 +20,18 @@ function seeds_nextjs_entity_base_field_info(EntityTypeInterface $entity_type) {
       ->setTargetEntityTypeId($entity_type->id())
       ->setComputed(TRUE)
       ->setInternal(FALSE)
-      ->setClass('\Drupal\seeds_nextjs\BreadcrumbsComputedField');
+      ->setClass('\Drupal\seeds_headless_helper\BreadcrumbsComputedField');
 
+    // Get the layout field config for the node bundle. field.field.node.BUNDLE.layout_builder__layout.
+    $fields['layout_builder_serialized'] = BaseFieldDefinition::create('string_cacheable')
+      ->setLabel(t('Layout Builder'))
+      ->setDescription(t('The layout builder'))
+      ->setCustomStorage(TRUE)
+      ->setTargetEntityTypeId($entity_type->id())
+      ->setComputed(TRUE)
+      ->setInternal(FALSE)
+      ->setClass('\Drupal\seeds_headless_helper\LayoutBuilderComputedField');
+  }
 
   $fields['menu_items'] = BaseFieldDefinition::create('string_cacheable')
     ->setLabel(t('Menu Items'))
@@ -30,7 +40,7 @@ function seeds_nextjs_entity_base_field_info(EntityTypeInterface $entity_type) {
     ->setTargetEntityTypeId($entity_type->id())
     ->setComputed(TRUE)
     ->setInternal(FALSE)
-    ->setClass('\Drupal\seeds_nextjs\MenuItemsComputedField');
+    ->setClass('\Drupal\seeds_headless_helper\MenuItemsComputedField');
 
   $fields['parent_menu_title'] = BaseFieldDefinition::create('string')
     ->setLabel(t('Parent Menu Title'))
@@ -39,7 +49,7 @@ function seeds_nextjs_entity_base_field_info(EntityTypeInterface $entity_type) {
     ->setTargetEntityTypeId($entity_type->id())
     ->setComputed(TRUE)
     ->setInternal(FALSE)
-    ->setClass('\Drupal\seeds_nextjs\ParentMenuTitleComputedField');
+    ->setClass('\Drupal\seeds_headless_helper\ParentMenuTitleComputedField');
 
   $fields['parent_menu_title'] = BaseFieldDefinition::create('string')
     ->setLabel(t('Parent Menu Title'))
@@ -48,7 +58,7 @@ function seeds_nextjs_entity_base_field_info(EntityTypeInterface $entity_type) {
     ->setTargetEntityTypeId($entity_type->id())
     ->setComputed(TRUE)
     ->setInternal(FALSE)
-    ->setClass('\Drupal\seeds_nextjs\ParentMenuTitleComputedField');
+    ->setClass('\Drupal\seeds_headless_helper\ParentMenuTitleComputedField');
 
   $fields['parent_summary'] = BaseFieldDefinition::create('string')
     ->setLabel(t('Parent Summary'))
@@ -57,7 +67,7 @@ function seeds_nextjs_entity_base_field_info(EntityTypeInterface $entity_type) {
     ->setTargetEntityTypeId($entity_type->id())
     ->setComputed(TRUE)
     ->setInternal(FALSE)
-    ->setClass('\Drupal\seeds_nextjs\ParentMenuSummaryComputedField');
+    ->setClass('\Drupal\seeds_headless_helper\ParentMenuSummaryComputedField');
 
   $fields['parent_canonical'] = BaseFieldDefinition::create('string')
     ->setLabel(t('Parent canonical'))
@@ -66,7 +76,7 @@ function seeds_nextjs_entity_base_field_info(EntityTypeInterface $entity_type) {
     ->setTargetEntityTypeId($entity_type->id())
     ->setComputed(TRUE)
     ->setInternal(FALSE)
-    ->setClass('\Drupal\seeds_nextjs\ParentMenuCanonicalComputedField');
+    ->setClass('\Drupal\seeds_headless_helper\ParentMenuCanonicalComputedField');
 
   return $fields;
 }
