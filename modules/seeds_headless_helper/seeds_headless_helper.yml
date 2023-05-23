@@ -1,0 +1,7 @@
+name: "Seeds Headless Helper"
+description: Provides useful enhancements for Next.js.
+type: module
+core_version_requirement: ^8.8 || ^9
+dependencies:
+  - drupal:webform
+  - jsonapi_resources:jsonapi_resources

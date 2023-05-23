@@ -1,0 +1,6 @@
+seeds_headless_helper.settings:
+  title: "Seeds Next.js"
+  description: "Seeds Next.js"
+  route_name: seeds_headless_helper.settings
+  base_route: next.settings
+  weight: 30
