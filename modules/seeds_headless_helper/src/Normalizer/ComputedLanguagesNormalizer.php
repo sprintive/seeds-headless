@@ -6,7 +6,7 @@ use Drupal\Core\Cache\CacheableDependencyInterface;
 use Drupal\Core\Cache\CacheableMetadata;
 use Drupal\Core\Field\FieldItemListInterface;
 use Drupal\Core\TypedData\Plugin\DataType\StringData;
-use Drupal\seeds_nextjs\JSONComputedFieldInterface;
+use Drupal\seeds_headless_helper\JSONComputedFieldInterface;
 use Drupal\serialization\Normalizer\NormalizerBase;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
 
