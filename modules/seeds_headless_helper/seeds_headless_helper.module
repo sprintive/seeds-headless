@@ -8,11 +8,11 @@ use Drupal\Core\Entity\EntityInterface;
 /**
  * Implements hook_entity_base_field_info().
  */
-function seeds_headless_helper_entity_base_field_info(EntityTypeInterface $entity_type) {
+function seeds_nextjs_entity_base_field_info(EntityTypeInterface $entity_type) {
   $fields = [];
 
-  if ($entity_type->id() === 'node' || $entity_type->id() === 'taxonomy_term') {
-
+  if ($entity_type->id() == 'node' || $entity_type->id() === 'taxonomy_term') {
+ 
     $fields['breadcrumbs'] = BaseFieldDefinition::create('string_cacheable')
       ->setLabel(t('Breadcrumbs'))
       ->setDescription(t('The breadcrumbs'))
@@ -20,7 +20,54 @@ function seeds_headless_helper_entity_base_field_info(EntityTypeInterface $entit
       ->setTargetEntityTypeId($entity_type->id())
       ->setComputed(TRUE)
       ->setInternal(FALSE)
-      ->setClass('\Drupal\seeds_headless_helper\BreadcrumbsComputedField');
+      ->setClass('\Drupal\seeds_nextjs\BreadcrumbsComputedField');
+
+
+  $fields['menu_items'] = BaseFieldDefinition::create('string_cacheable')
+    ->setLabel(t('Menu Items'))
+    ->setDescription(t('The menu items'))
+    ->setCustomStorage(TRUE)
+    ->setTargetEntityTypeId($entity_type->id())
+    ->setComputed(TRUE)
+    ->setInternal(FALSE)
+    ->setClass('\Drupal\seeds_nextjs\MenuItemsComputedField');
+
+  $fields['parent_menu_title'] = BaseFieldDefinition::create('string')
+    ->setLabel(t('Parent Menu Title'))
+    ->setDescription(t('The parent menu title'))
+    ->setCustomStorage(TRUE)
+    ->setTargetEntityTypeId($entity_type->id())
+    ->setComputed(TRUE)
+    ->setInternal(FALSE)
+    ->setClass('\Drupal\seeds_nextjs\ParentMenuTitleComputedField');
+
+  $fields['parent_menu_title'] = BaseFieldDefinition::create('string')
+    ->setLabel(t('Parent Menu Title'))
+    ->setDescription(t('The parent menu title'))
+    ->setCustomStorage(TRUE)
+    ->setTargetEntityTypeId($entity_type->id())
+    ->setComputed(TRUE)
+    ->setInternal(FALSE)
+    ->setClass('\Drupal\seeds_nextjs\ParentMenuTitleComputedField');
+
+  $fields['parent_summary'] = BaseFieldDefinition::create('string')
+    ->setLabel(t('Parent Summary'))
+    ->setDescription(t('The parent menu summary'))
+    ->setCustomStorage(TRUE)
+    ->setTargetEntityTypeId($entity_type->id())
+    ->setComputed(TRUE)
+    ->setInternal(FALSE)
+    ->setClass('\Drupal\seeds_nextjs\ParentMenuSummaryComputedField');
+
+  $fields['parent_canonical'] = BaseFieldDefinition::create('string')
+    ->setLabel(t('Parent canonical'))
+    ->setDescription(t('The parent menu canonical'))
+    ->setCustomStorage(TRUE)
+    ->setTargetEntityTypeId($entity_type->id())
+    ->setComputed(TRUE)
+    ->setInternal(FALSE)
+    ->setClass('\Drupal\seeds_nextjs\ParentMenuCanonicalComputedField');
+
   return $fields;
 }
 

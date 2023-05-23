@@ -15,3 +15,6 @@ services:
   seeds_headless_helper.requester:
     class: Drupal\seeds_headless_helper\SeedsNextJsRequester
     arguments: []
+  seeds_headless_helper.created_menues_manager:
+    class: Drupal\seeds_headless_helper\CreatedMenuesManager
+    arguments: ["@entity_type.manager"]
