@@ -1,9 +1,13 @@
 <?php 
 
-use GuzzleHttp\Exception\GuzzleException;
 use Drupal\Core\Entity\EntityInterface;
+use Drupal\Core\Entity\EntityTypeInterface;
+use Drupal\Core\Field\BaseFieldDefinition;
+use GuzzleHttp\Exception\GuzzleException;
 
 
+
+const X_HEADER_SECRET = 'X-DRUPAL-API-SECRET';
 
 /**
  * Implements hook_entity_base_field_info().
@@ -11,8 +15,43 @@ use Drupal\Core\Entity\EntityInterface;
 function seeds_headless_helper_entity_base_field_info(EntityTypeInterface $entity_type) {
   $fields = [];
 
+  $fields['canonical'] = BaseFieldDefinition::create('string')
+    ->setLabel(t('Canonical'))
+    ->setDescription(t('The full path'))
+    ->setCustomStorage(TRUE)
+    ->setTargetEntityTypeId($entity_type->id())
+    ->setComputed(TRUE)
+    ->setInternal(FALSE)
+    ->setClass('\Drupal\seeds_headless_helper\FullPathComputedField');
+
   if ($entity_type->id() == 'node' || $entity_type->id() === 'taxonomy_term') {
- 
+    $fields['languages'] = BaseFieldDefinition::create('string_long')
+      ->setLabel(t('Languages'))
+      ->setDescription(t('The links for languages'))
+      ->setCustomStorage(TRUE)
+      ->setTargetEntityTypeId($entity_type->id())
+      ->setComputed(TRUE)
+      ->setInternal(FALSE)
+      ->setClass('\Drupal\seeds_headless_helper\LanguagesComputedField');
+
+    $fields['bundle_id'] = BaseFieldDefinition::create('string')
+      ->setLabel(t('Bundle'))
+      ->setDescription(t('The bundle'))
+      ->setCustomStorage(TRUE)
+      ->setTargetEntityTypeId($entity_type->id())
+      ->setComputed(TRUE)
+      ->setInternal(FALSE)
+      ->setClass('\Drupal\seeds_nseeds_headless_helperextjs\BundleComputedField');
+
+    $fields['bundle_label'] = BaseFieldDefinition::create('string')
+      ->setLabel(t('Bundle Label'))
+      ->setDescription(t('The bundle label'))
+      ->setCustomStorage(TRUE)
+      ->setTargetEntityTypeId($entity_type->id())
+      ->setComputed(TRUE)
+      ->setInternal(FALSE)
+      ->setClass('\Drupal\seeds_headless_helper\BundleLabelComputedField');
+
     $fields['breadcrumbs'] = BaseFieldDefinition::create('string_cacheable')
       ->setLabel(t('Breadcrumbs'))
       ->setDescription(t('The breadcrumbs'))
@@ -77,6 +116,15 @@ function seeds_headless_helper_entity_base_field_info(EntityTypeInterface $entit
     ->setComputed(TRUE)
     ->setInternal(FALSE)
     ->setClass('\Drupal\seeds_headless_helper\ParentMenuCanonicalComputedField');
+    
+  $fields['bundle_redirect'] = BaseFieldDefinition::create('boolean')
+    ->setLabel(t('Bundle Redirect'))
+    ->setDescription(t('Redirect for bundle defualt'))
+    ->setCustomStorage(TRUE)
+    ->setTargetEntityTypeId($entity_type->id())
+    ->setComputed(TRUE)
+    ->setInternal(FALSE)
+    ->setClass('\Drupal\seeds_headless_helper\BundleRedirectComputedField');
 
   return $fields;
 }

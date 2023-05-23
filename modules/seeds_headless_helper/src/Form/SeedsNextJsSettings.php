@@ -22,7 +22,7 @@ class SeedsNextJsSettings extends ConfigFormBase {
    */
   protected function getEditableConfigNames() {
     return [
-      'seeds_nextjs.settings',
+      'seeds_headless_helper.settings',
     ];
   }
 
@@ -30,7 +30,7 @@ class SeedsNextJsSettings extends ConfigFormBase {
    * {@inheritdoc}
    */
   public function buildForm(array $form, FormStateInterface $form_state) {
-    $config = $this->config('seeds_nextjs.settings');
+    $config = $this->config('seeds_headless_helper.settings');
 
     $form['api_secret'] = [
       '#type' => 'textfield',
@@ -74,7 +74,7 @@ class SeedsNextJsSettings extends ConfigFormBase {
    * {@inheritdoc}
    */
   public function submitForm(array &$form, FormStateInterface $form_state) {
-    $this->config('seeds_nextjs.settings')
+    $this->config('seeds_headless_helper.settings')
       ->set('api_secret', $form_state->getValue('api_secret'))
       ->set('invalidate_url', $form_state->getValue('invalidate_url'))
       ->set('nextjs_host', $form_state->getValue('nextjs_host'))

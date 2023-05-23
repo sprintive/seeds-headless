@@ -33,7 +33,7 @@ class CreatedMenuesManager implements CreatedMenuesManagerInterface {
   /**
    * Gets the menu id of an entity.
    *
-   * @param \Drupal\seeds_nextjs\EntityWithMenuItemsInterface $entity
+   * @param \Drupal\seeds_headless_helper\EntityWithMenuItemsInterface $entity
    *   The entity.
    *
    * @return string

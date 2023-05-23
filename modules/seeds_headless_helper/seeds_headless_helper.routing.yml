@@ -1,5 +1,5 @@
 route_callbacks:
-  - '\Drupal\seeds_nextjs\Routing\Routes::routes'
+  - '\Drupal\seeds_headless_helper\Routing\Routes::routes'
 seeds_headless_helper.breadcrumb_api:
   path: "/api/v1/breadcrumb/{entity_type}/{entity_id}"
   defaults:

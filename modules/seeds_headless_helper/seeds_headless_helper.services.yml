@@ -1,6 +1,6 @@
 services:
   serializer.normalizer.computed_languages:
-    class: Drupal\seeds_nextjs\Normalizer\ComputedLanguagesNormalizer
+    class: Drupal\seeds_headless_helper\Normalizer\ComputedLanguagesNormalizer
     tags:
       - { name: normalizer, priority: 1002 }
   # Event subscriber.
