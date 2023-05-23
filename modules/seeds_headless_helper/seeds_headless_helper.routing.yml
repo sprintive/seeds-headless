@@ -1,6 +1,17 @@
 route_callbacks:
   - '\Drupal\seeds_nextjs\Routing\Routes::routes'
-
+seeds_headless_helper.breadcrumb_api:
+  path: "/api/v1/breadcrumb/{entity_type}/{entity_id}"
+  defaults:
+    _controller: '\Drupal\seeds_headless_helper\Controller\BreadcrumbController::getBreadcrumb'
+    _title: "Breadcrumb API"
+  requirements:
+    _permission: "access content"
+    _custom_access: '\Drupal\seeds_headless_helper\Controller\BreadcrumbController::access'
+  options:
+    _admin_route: FALSE
+    _auth:
+      - basic_auth
 seeds_headless_helper.settings:
   path: "/admin/config/seeds-nextjs-helper"
   defaults:
