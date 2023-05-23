@@ -4,10 +4,30 @@ use GuzzleHttp\Exception\GuzzleException;
 use Drupal\Core\Entity\EntityInterface;
 
 
+
+/**
+ * Implements hook_entity_base_field_info().
+ */
+function seeds_headless_helper_entity_base_field_info(EntityTypeInterface $entity_type) {
+  $fields = [];
+
+  if ($entity_type->id() === 'node' || $entity_type->id() === 'taxonomy_term') {
+
+    $fields['breadcrumbs'] = BaseFieldDefinition::create('string_cacheable')
+      ->setLabel(t('Breadcrumbs'))
+      ->setDescription(t('The breadcrumbs'))
+      ->setCustomStorage(TRUE)
+      ->setTargetEntityTypeId($entity_type->id())
+      ->setComputed(TRUE)
+      ->setInternal(FALSE)
+      ->setClass('\Drupal\seeds_headless_helper\BreadcrumbsComputedField');
+  return $fields;
+}
+
 /**
  * Implements hook_entity_update().
  */
-function seeds_nextjs_entity_update(EntityInterface $entity) {
+function seeds_headless_helper_entity_update(EntityInterface $entity) {
   $allow_clearing = &drupal_static('seeds_nextjs_allow_clearing');
   $allow_clearing = TRUE;
 }
@@ -15,8 +35,8 @@ function seeds_nextjs_entity_update(EntityInterface $entity) {
 /**
  * Implements hook_rebuild().
  */
-function seeds_nextjs_rebuild() {
-  $flush_cache_on_rebuild = (bool) \Drupal::config('seeds_nextjs.settings')->get('flush_cache_on_rebuild');
+function seeds_headless_helper_rebuild() {
+  $flush_cache_on_rebuild = (bool) \Drupal::config('seeds_headless_helper.settings')->get('flush_cache_on_rebuild');
 
   if (!$flush_cache_on_rebuild) {
     return;
@@ -28,7 +48,7 @@ function seeds_nextjs_rebuild() {
   try {
     $requester->request('/api/flush-cache', 'POST');
   } catch (GuzzleException $e) {
-    \Drupal::logger('seeds_nextjs')->error($e->getMessage());
+    \Drupal::logger('seeds_headless_helper')->error($e->getMessage());
     \Drupal::messenger()->addError(t('Failed to flush the cache in NextJS server.'));
   }
 }
