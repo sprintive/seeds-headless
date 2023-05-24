@@ -1,0 +1,7 @@
+name: "Seeds NextJS Helper"
+description: Provides useful enhancements for Next.js.
+type: module
+core_version_requirement: ^9 || ^10
+dependencies:
+  - drupal:webform
+  - jsonapi_resources:jsonapi_resources
