@@ -23,7 +23,7 @@ class ComputedLanguagesNormalizer extends NormalizerBase implements NormalizerIn
   /**
    * {@inheritDoc}
    */
-  public function supportsNormalization($data, $format = NULL) {
+  public function supportsNormalization($data, $format = NULL,$context = []): bool {
     if ($data instanceof StringData) {
       return $data->getParent()->getParent() instanceof JSONComputedFieldInterface;
     }
