@@ -41,7 +41,7 @@ function seeds_headless_helper_entity_base_field_info(EntityTypeInterface $entit
       ->setTargetEntityTypeId($entity_type->id())
       ->setComputed(TRUE)
       ->setInternal(FALSE)
-      ->setClass('\Drupal\seeds_nseeds_headless_helperextjs\BundleComputedField');
+      ->setClass('\Drupal\seeds_headless_helper\BundleComputedField');
 
     $fields['bundle_label'] = BaseFieldDefinition::create('string')
       ->setLabel(t('Bundle Label'))
