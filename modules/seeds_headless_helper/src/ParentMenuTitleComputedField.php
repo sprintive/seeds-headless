@@ -31,24 +31,20 @@ class ParentMenuTitleComputedField extends FieldItemList {
     $entity = $this->getEntity();
 
     // Check if the entity has layout.
-    if ($entity->isNew() || !($entity instanceof NodeInterface) || !($entity instanceof EntityWithMenuItemsInterface)) {
+    if ($entity->isNew() || !($entity instanceof NodeInterface) ) {
       return;
     }
 
     /** @var EntityWithMenuItemsInterface&NodeInterface $entity */
     $entity = $this->prepareEntity($entity);
 
-    $parent_menu_title = NULL;
-    if ($entity->isMenuShown() || $entity->withCreatedMenu()) {
-      $parent_menu_title = $entity->getTitle();
-    }
-    else {
-      $parent_node = $this->loadParentNode($entity->id());
-      if ($parent_node instanceof EntityWithMenuItemsInterface && ($parent_node->isMenuShown() || $parent_node->withCreatedMenu())) {
-        $parent_menu_title = $parent_node->getTitle();
-      }
-    }
+    $parent_node = $this->loadParentNode($entity->id());
 
+    $parent_menu_title = NULL;
+    if ($parent_node) {
+      $parent_menu_title = $parent_node->getTitle();
+    }
+    
     $this->list[0] = $this->createItem(0, $parent_menu_title);
   }
 
