@@ -39,16 +39,15 @@ class ParentMenuCanonicalComputedField extends FieldItemList {
     $entity = $this->prepareEntity($entity);
 
     $parent_menu_cononical = NULL;
-    if ($entity->isMenuShown() || $entity->withCreatedMenu()) {
-      $url = \Drupal\Core\Url::fromRoute('entity.node.canonical', ['node' => $entity->id()]);
+    $parent_node = $this->loadParentNode($entity->id());
+
+    if ($parent_node) {
+      $url = \Drupal\Core\Url::fromRoute('entity.node.canonical', ['node' => $parent_node->id()]);
       $parent_menu_cononical = $url->toString();
     }
     else {
-      $parent_node = $this->loadParentNode($entity->id());
-      if ($parent_node instanceof EntityWithMenuItemsInterface && ($parent_node->isMenuShown() || $parent_node->withCreatedMenu())) {
-        $url = \Drupal\Core\Url::fromRoute('entity.node.canonical', ['node' => $parent_node->id()]);
-        $parent_menu_cononical = $url->toString();
-      }
+      $url = \Drupal\Core\Url::fromRoute('entity.node.canonical', ['node' => $entity->id()]);
+      $parent_menu_cononical = $url->toString();
     }
 
     $this->list[0] = $this->createItem(0, $parent_menu_cononical);
