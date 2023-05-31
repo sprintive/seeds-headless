@@ -130,7 +130,7 @@
         "Issue #1038316: Allow for deletion of a single value of a multiple value field": "https://www.drupal.org/files/issues/2021-12-01/1038316-242.patch",
         "Issue #2816447: Get feed title in correct language": "https://www.drupal.org/files/issues/2022-07-19/2816447-49.patch",
         "Issue #2816447: Clean up Claro unused images": "https://www.drupal.org/files/issues/2023-01-08/3092984-27.patch",
-        "Issue #3338328 Update to Symfony 6.3": "https://www.drupal.org/files/issues/2023-05-31/3338328-52.patch"
+        "Issue #3338328 Update to Symfony 6.3 ": "https://www.drupal.org/files/issues/2023-05-31/3338328-52.patch"
       },
       "drupal/facets": {
         "Facets Serializer Pagination": "https://www.drupal.org/files/issues/2019-04-30/facets-rest_pager-3008615-7.patch"
