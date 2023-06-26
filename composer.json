@@ -8,7 +8,7 @@
     "composer/installers": "^2.0",
     "cweagans/composer-patches": "1.7.3",
     "drupal/core-composer-scaffold": "^10.0",
-    "drush/drush": "*",
+    "drush/drush": ">=9 <12",
     "drupal/core": "10.0.9",
     "drupal/root": "2.0.0-alpha7",
     "drupal/webform": "6.2.0-beta5",
