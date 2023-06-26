@@ -10,7 +10,7 @@
     "drupal/core-composer-scaffold": "^10.0",
     "drush/drush": "*",
     "drupal/core": "10.0.9",
-    "drupal/root": "2.0.0-alpha4",
+    "drupal/root": "2.0.0-alpha7",
     "drupal/webform": "6.2.0-beta5",
     "drupal/field_group": "3.4",
     "drupal/linkit": "6.0.0-rc1",
