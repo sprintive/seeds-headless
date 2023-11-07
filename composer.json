@@ -174,9 +174,6 @@
       "drupal/yoast_seo": {
         "Issue #3204023: Style issues on mobile": "https://www.drupal.org/files/issues/2021-03-17/style_issues_on_mobile-3204023-3.patch",
         "Issue #3125252: I can't translate SEO Content analysis": "https://www.drupal.org/files/issues/2021-03-17/i_cant_translate_seo_content_analysis-3125252-4.patch"
-      },
-      "drupal/simple_sitemap": {
-        "Issue #2987748: Add Media images to sitemap": "https://www.drupal.org/files/issues/2022-06-22/simple_sitemap_support_media_and_image_styles-2987748-60.patch"
       }
     },
     "patchLevel": {
