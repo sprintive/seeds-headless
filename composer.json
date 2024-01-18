@@ -8,37 +8,54 @@
     "composer/installers": "^2.0",
     "cweagans/composer-patches": "1.7.3",
     "drupal/core-composer-scaffold": "^10.0",
-    "drush/drush": ">=9 <12",
-    "drupal/core": "10.1.5",
+    "drush/drush": "^12.4.3",
+    "drupal/coder": "*",
+    "drupal/core": "10.2.2",
+    "drupal/seeds_editor": "^1.1.0",
+    "drupal/seeds_media": "^1.0.0",
+    "drupal/seeds_pollination": "^1.0.0",
+    "drupal/seeds_development": "^1.0.0",
+    "drupal/seeds_security": "^1.0.0",
+    "drupal/seeds_seo": "^1.0.3",
+    "drupal/seeds_performance": "^1.0.0",
+    "drupal/seeds_layouts": "^2.0.1",
+    "drupal/seeds_toolbar": "^2.0.5",
+    "drupal/seeds_coat": "^1.11 || ^3.0.0",
     "drupal/root": "2.0.0-alpha8",
     "drupal/webform": "^6.2.0-beta7",
-    "drupal/field_group": "3.4",
-    "drupal/linkit": "^6.1.1",
-    "drupal/seeds_layouts": "2.0.1",
-    "drupal/crop": "2.3",
-    "drupal/focal_point": "^2.0",
+    "drupal/entity": "^1.4",
+    "drupal/entity_reference_revisions": "^1.11",
+    "drupal/ctools": "^3.14",
+    "drupal/token": "^1.13",
+    "drupal/ds": "^3.18",
+    "drupal/field_group": "^3.4",
+    "drupal/linkit": "^6.1.2",
+    "drupal/crop": "^2.3",
+    "drupal/focal_point": "^2.0.2",
     "drupal/smart_trim": "^2.1.0",
-    "drupal/allowed_formats": "2.0.0",
-    "drupal/paragraphs": "1.16",
-    "drupal/layout_builder_restrictions": "^2.17",
-    "drupal/layout_builder_modal": "1.2",
+    "drupal/allowed_formats": "3.0.0",
+    "drupal/paragraphs": "1.17",
+    "drupal/paragraphs_admin": "^1.5",
+    "drupal/layout_builder_restrictions": "^2.19",
+    "drupal/layout_builder_modal": "^1.2",
     "drupal/entityqueue": "1.7",
     "drupal/admin_toolbar": "3.4.2",
-    "drupal/seeds_toolbar": "^2.0.5",
     "drupal/media_embeddable": "1.1.0",
-    "drupal/rabbit_hole": "1.0-beta11",
+    "drupal/rabbit_hole": "^1.0@beta",
     "drupal/menu_admin_per_menu": "1.5",
     "drupal/taxonomy_access_fix": "4.0.1",
     "drupal/block_content_permissions": "1.11",
     "drupal/masquerade": "2.0-rc4",
-    "drupal/views_bulk_operations": "^4.2.4",
+    "drupal/responsive_preview": "^2.1.1",
+    "drupal/views_bulk_operations": "^4.2.5",
     "drupal/views_bulk_edit": "^2.9",
-    "drupal/diff": "1.1",
-    "drupal/transliterate_filenames": "2.0.1",
-    "drupal/editor_advanced_link": "^2.2",
-    "drupal/ace_editor": "2.0.0-beta2",
+    "drupal/diff": "^1.1",
+    "drupal/transliterate_filenames": "^2.0.2",
+    "drupal/embed": "^1.7",
+    "drupal/entity_embed": "^1.5",
+    "drupal/editor_advanced_link": "^2.2.4",
+    "drupal/ace_editor": "^2.0@beta",
     "drupal/ckeditor_bidi": "4.0.1",
-    "drupal/fast_404": "dev-seeds",
     "drupal/metatag": "^2.0",
     "drupal/pathauto": "1.11",
     "drupal/simple_sitemap": "3.11 || ^4.1.6",
@@ -49,6 +66,8 @@
     "drupal/cloudflare": "2.0.0-alpha1",
     "drupal/ultimate_cron": "2.0-alpha6",
     "drupal/smtp": "1.2",
+    "drupal/unified_mail_dispatcher": "^1.0.0",
+    "drupal/fpa": "^4.0.0",
     "drupal/captcha": "^2.0.3",
     "drupal/recaptcha": "3.2",
     "drupal/password_policy": "4.0.0",
@@ -82,11 +101,7 @@
     "drupal/jwt": "^1.1",
     "drupal/key": "^1.17",
     "drupal/consumer_image_styles": "^4.0",
-    "drupal/preview_link": "^2.1@alpha",
-    "drupal/seeds_editor": "^1.1.0",
-    "drupal/seeds_media": "^1.0.0",
-    "drupal/seeds_pollination": "^1.0.0",
-    "drupal/seeds_development": "^1.0.0"
+    "drupal/preview_link": "^2.1@alpha"
   },
   "conflict": {
     "drupal/drupal": "*"
@@ -98,23 +113,13 @@
       "type": "composer",
       "url": "https://packages.drupal.org/8",
       "exclude": [
-        "drupal/fast_404",
-        "drupal/ckeditor_iframe",
         "drupal/jsonapi_response_alter",
         "drupal/layoutbuilder_search_api"
       ]
     },
     {
       "type": "git",
-      "url": "https://git.drupalcode.org/issue/fast_404-3287465.git"
-    },
-    {
-      "type": "git",
       "url": "https://git.drupalcode.org/issue/jsonapi_response_alter-3288148.git"
-    },
-    {
-      "type": "git",
-      "url": "https://git.drupalcode.org/issue/ckeditor_iframe-3286496.git"
     },
     {
       "type": "git",
@@ -124,13 +129,9 @@
   "extra": {
     "patches": {
       "drupal/core": {
-        "Issue #3088239: Revisions on relations are not loaded correctly resulting in wrong data in includes": "https://www.drupal.org/files/issues/2022-09-27/3088239-33.patch",
-        "Make BaseFieldOverride inherit internal property from the base field": "https://www.drupal.org/files/issues/2022-04-09/drupal-base-field-override-inherit-internal-3274419-2-9.4.patch",
+        "Issue #3088239: Revisions on relations are not loaded correctly resulting in wrong data in includes": "https://www.drupal.org/files/issues/2024-01-08/3088239-44.patch",
         "Issue #2073837: Validation errors on form elements without #access": "https://www.drupal.org/files/issues/2022-03-21/form-validation-errors-2073837-33.patch",
-        "Issue #1038316: Allow for deletion of a single value of a multiple value field": "https://www.drupal.org/files/issues/2021-12-01/1038316-242.patch",
-        "Issue #2816447: Get feed title in correct language": "https://www.drupal.org/files/issues/2022-07-19/2816447-49.patch",
-        "Issue #2816447: Clean up Claro unused images": "https://www.drupal.org/files/issues/2023-01-08/3092984-27.patch",
-        "Issue #3338328 Update to Symfony 6.3 ": "https://www.drupal.org/files/issues/2023-05-31/3338328-52.patch"
+        "Issue #2816447: Clean up Claro unused images": "https://www.drupal.org/files/issues/2023-01-08/3092984-27.patch"
       },
       "drupal/facets": {
         "Facets Serializer Pagination": "https://www.drupal.org/files/issues/2019-04-30/facets-rest_pager-3008615-7.patch"
@@ -161,19 +162,6 @@
       },
       "drupal/jsonapi_response_alter": {
         "Issue #3341933 Add support to JSON:API Menu Items module": "https://www.drupal.org/files/issues/2023-02-15/add-support-to-json-api-menu-items-module-3341933-3.patch"
-      },
-      "drupal/focal_point": {
-        "Issue #3094478: Integrate focal point with media_library": "https://www.drupal.org/files/issues/2020-01-09/3094478-10.patch"
-      },
-      "drupal/block_content_permissions": {
-        "Issue #2920739: Allow accessing the Custom block library page without Administer blocks permission": "https://www.drupal.org/files/issues/2018-03-17/block_content_permissions-2920739-16.patch"
-      },
-      "drupal/paragraphs": {
-        "Issue #2901390: Integrity constraint violation: 1048 Column 'langcode' cannot be null": "https://www.drupal.org/files/issues/2019-08-10/paragraphs-set_langcode_widgets-290139_updated.patch"
-      },
-      "drupal/yoast_seo": {
-        "Issue #3204023: Style issues on mobile": "https://www.drupal.org/files/issues/2021-03-17/style_issues_on_mobile-3204023-3.patch",
-        "Issue #3125252: I can't translate SEO Content analysis": "https://www.drupal.org/files/issues/2021-03-17/i_cant_translate_seo_content_analysis-3125252-4.patch"
       }
     },
     "patchLevel": {
