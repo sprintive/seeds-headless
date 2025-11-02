@@ -10,7 +10,7 @@
     "drupal/core-composer-scaffold": "^10.0",
     "drush/drush": "^12.4.3",
     "drupal/coder": "*",
-    "drupal/core": "10.5.1",
+    "drupal/core": "10.5.4",
     "drupal/seeds_editor": "^1.1",
     "drupal/seeds_media": "^1.0",
     "drupal/seeds_pollination": "^1.0",
@@ -25,13 +25,13 @@
     "drupal/seeds_administration": "^1.0",
     "drupal/jsonapi_response_alter": "^1.2",
     "drupal/layoutbuilder_search_api": "^1.0",
-    "drupal/redis": "^1.9",
-    "drupal/config_split": "^1.9",
+    "drupal/redis": "^1.10",
+    "drupal/config_split": "^1.10",
     "drupal/search_api_solr": "^4.3",
     "drupal/better_exposed_filters": "^6.0",
     "drupal/votingapi": "^3.0@beta",
     "drupal/disable_user_1_edit": "^1.6",
-    "drupal/override_node_options": "^2.8",
+    "drupal/override_node_options": "^2.9",
     "drupal/config_ignore": "^3.3",
     "drupal/webform_rest": "^4.1",
     "drupal/next": "^1.6",
@@ -42,8 +42,7 @@
     "drupal/jwt": "^2.1",
     "drupal/key": "^1.19",
     "drupal/consumer_image_styles": "^4.0",
-    "drupal/preview_link": "^2.2@alpha",
-    "drupal/seeds_tailwind": "^1.0"
+    "drupal/preview_link": "^2.2@alpha"
   },
   "conflict": {
     "drupal/drupal": "*"
@@ -57,36 +56,6 @@
     }
   ],
   "extra": {
-    "patches": {
-      "drupal/core": {
-        "Issue #3088239: Revisions on relations are not loaded correctly resulting in wrong data in includes": "https://www.drupal.org/files/issues/2024-01-08/3088239-44.patch",
-        "Issue #2073837: Validation errors on form elements without #access": "https://www.drupal.org/files/issues/2022-03-21/form-validation-errors-2073837-33.patch",
-        "#3332416 CKEditor 5 toolbar items of multi-value field": "https://www.drupal.org/files/issues/2024-04-09/3332416-79.patch"
-      },
-      "drupal/facets": {
-        "Facets Serializer Pagination": "https://www.drupal.org/files/issues/2019-04-30/facets-rest_pager-3008615-7.patch"
-      },
-      "drupal/jsonapi_views": {
-        "Additinonal meta information about the view": "https://www.drupal.org/files/issues/2022-08-22/meta_should_include_more_information-3292906-4.patch"
-      },
-      "drupal/webform_rest": {
-        "Support uploading files": "https://www.drupal.org/files/issues/2023-05-10/webform_rest-add_file_upload_resource-2899902-56-v4.x.patch"
-      },
-      "drupal/decoupled_router": {
-        "Unable to resolve path on node in other language than default2": "https://git.drupalcode.org/project/decoupled_router/-/merge_requests/11.diff"
-      },
-      "drupal/subrequests": {
-        "Get same results on different request": "https://www.drupal.org/files/issues/2019-07-18/change_request_type-63049395-09.patch",
-        "PHP Fatal error: Uncaught Symfony LogicException: Cannot generate lazy proxy": "https://www.drupal.org/files/issues/2024-01-22/pagecache-final-class-3414134.patch"
-      },
-      "drupal/ace_editor": {
-        "#ISSUE 2941227 Fix Missing install/schema-1": "https://www.drupal.org/files/issues/2022-01-26/ace_editor-2941227-8.patch",
-        "#ISSUE 2941227 Fix Missing install/schema-2": "https://www.drupal.org/files/issues/2024-06-22/ace_editor-3455758-8--interdiff.patch"
-      }
-    },
-    "patchLevel": {
-      "drupal/core": "-p2"
-    },
     "drupal-scaffold": {
       "locations": {
         "web-root": "public_html/"
